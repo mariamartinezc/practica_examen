@@ -11,9 +11,9 @@ departamentos = [
     [ 7 , 7 , 7 , 7 ],
     [ 8 , 8 , 8 , 8 ],
     [ 9 , 9 , 9 , 9 ],
-    [ 10 , 10 , 10 , 10 ],
+    [ 10 , 10 , 10 , 10 ]
 ]
-# Diccionario para almacenar las entradas vendidas y el dinero recaudado por cada tipo de entrada
+# Diccionario para almacenar los departamentos vendidos y el dinero recaudado por cada compra
 recaudaciondepartamento = {
     "A": [0, 0],  # Tipo A
     "B": [0, 0],  # Tipo B
@@ -62,14 +62,14 @@ def  comprar_departamento():
             print("-----------------------------------------")
             print(mostrar_departamentos_disponibles())
             print(f"Tipo de departamento seleccionada : {tipo}")
-            print("Ejemplo A :(1-10), B :(1-10), C :(1-10), D :(1-10).")
+            print(f"Rango piso {rangopiso}.")
             print("El departamento debe estar dentro de el rango del tipo")
             
             while True:
                 try:
                     piso = int(input(f"Ingrese el piso que desea comprar : "))
                     if piso < rangopiso[0] or piso > rangopiso[1]:
-                        print("El asiento no es válido")
+                        print("El piso no es válido")
                     else:
                         break
                 except ValueError:
